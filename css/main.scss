@@ -1,4 +1,5 @@
 $main-color: #171717;
+$sub-color: rgb(167, 0, 0);
 html {
   scroll-behavior: smooth;
 }
@@ -111,7 +112,7 @@ header {
       height: 100vh;
     }
     
-    >ul {
+    .lnb {
       display: flex;
       flex-direction: column;
       li {
@@ -392,6 +393,9 @@ main {
                   font-weight: 300;
                   padding: 12px 0;
                   border-bottom: 1px solid #999;
+                  span {
+                    color: $sub-color;
+                  }
                 }
 
                 p {
@@ -433,13 +437,13 @@ main {
                   margin-right: 10px;
                   &:hover::after {
                     transform: scaleX(1);
-                    transition: all .3s;
                   }
                   &:hover {
                     color: #999;
                     transition: all .2s;
                   }
                   &::after {
+                    transition: all .3s;
                     content: '';
                     width: 100%;
                     height: .5px;
@@ -574,30 +578,30 @@ main {
       z-index: 99;
       padding: 0 12px 0 64px;
       box-sizing: border-box;
-      >ul {
+      .lnb {
         flex-direction: row;
         li {
           a {
             font-size: 18px;
             position: relative;
             &:hover {
-              color: #999;
-              transition: all .2s;
+              // color: #999;
+              // transition: all .2s;
             }
             &:hover::after {
               transform: scaleX(1);
-              transition: all .2s;
             }
             &::after {
               content: '';
-              width: 70%;
-              height: .5px;
+              transition: transform .4s ease-out;
+              width: 80%;
+              height: 5px;
               position: absolute;
-              bottom: 0;
-              left: 15%;
+              bottom: 10px;
+              left: 10%;
               transform:scaleX(0);
               transform-origin: left;
-              background-color: #999;
+              background-color: rgba(rgb(179, 0, 0), .6);
             }
           }
         }
@@ -611,10 +615,10 @@ main {
             a {
               font-weight: 200;
               &:hover i {
-                color: #999;
-                transition: all .2s;
+                color: $sub-color;
               }
               i {
+                transition: all .2s;
                 font-size: 20px;
                 
               }
