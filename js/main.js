@@ -53,36 +53,3 @@ window.addEventListener('load',() => {
 
 
 
-// const section3 = document.querySelector('.section1')
-// const t = section3.getBoundingClientRect()
-// console.log(t)
-// window.addEventListener('scroll', () => {
-//   if (window.scrollY > t.bottom / 2) {
-//     console.log('asd')
-//   }
-// })
-
-const one = document.querySelector('.section1')
-const oneone = one.getBoundingClientRect()
-const two = document.querySelector('.section2')
-const twotwo = two.getBoundingClientRect()
-const thr = document.querySelector('.section3')
-const thrthr = thr.getBoundingClientRect()
-const ii = document.querySelector('.ii')
-const iii = document.querySelector('.iii')
-// const iiiTop = ii.getBoundingClientRect()
-console.log(oneone)
-
-// const iiiTop = window.pageYOffset + ii.getBoundingClientRect().top;
-
-// window.addEventListener('scroll', () => {
-//   // console.log(window.scrollY)
-//   // console.log("ss:",iiiTop)
-//   if (window.scrollY > iiiTop) {
-//     iii.style.left = `-${window.scrollY - iiiTop}px`
-//     iii.style.position = 'fixed'
-//   } else {
-//     iii.style.position = 'static'
-//   }
-// })
-

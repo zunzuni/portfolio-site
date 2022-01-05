@@ -312,22 +312,6 @@ main {
         }
         .section2-text {
           position: relative;
-          .section2-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            overflow: hidden;
-            background-image: url(../image/zun-img1.jpg);
-            background-position: left;
-            background-size: 140%;
-            position: absolute;
-            right: 0;
-            top: -40px;
-            img {
-              width: 100%;
-              height: auto;
-            }
-          }
           >div {
             p:nth-child(1) {
               font-size: 16px;
@@ -339,6 +323,51 @@ main {
               font-size: 16px;
               font-weight: 200;
               line-height: 1.5;
+            }
+            &.section2-text-2 {
+              >div {
+                display: flex;
+                p {
+                  display: block;
+                  &:nth-child(1) {
+                    >span {
+                      width: 150px;
+                      display: block;
+                      margin-bottom: 10px;
+                      i {
+                        font-size: 24px;
+                      }
+                    
+                      >span {
+                        display: inline-block;
+                        padding: 4px 6px;
+                        border-radius: 2px;
+                        font-size: 14px;
+                        color: #fff;
+                        &.red {
+                          background-color: rgb(179, 86, 0);
+                        }
+                    
+                        &.blue {
+                          background-color: rgb(0, 52, 163);
+                        }
+                    
+                        &.yellow {
+                          background-color: rgb(145, 145, 0);
+                        }
+                    
+                        &.blue-orange {
+                          background: linear-gradient(125deg, rgb(92, 149, 172), rgb(211, 166, 83));
+                        }
+                      }
+                    }
+                  }
+                  &:nth-child(2) {
+                    font-size: 16px;
+                    margin: 24px 0;
+                  }
+                }
+              }
             }
           }
         }
@@ -562,9 +591,21 @@ main {
   }
 }
 .section5 {
-    padding: 90px 24px 24px 24px;
-    background-color: $main-color;
+  background-color: $main-color;
+  padding: 90px 24px 24px 24px;
+  position: relative;
   .inner {
+    width: 100%;
+    height: 100%;
+    .square {
+      position: absolute;
+      z-index: 1;
+      width: 70%;
+      height: 60%;
+      right: 0%;
+      bottom: 0;
+      background-color: #555;
+    }
     h2 {
       font-size: 14px;
       font-weight: 300;
@@ -580,14 +621,43 @@ main {
         background-color: #fff;
       }
     }
-    >div {
-      width: 400px;
-      margin: 0 auto;
-      padding: 24px;
-      p {
-        line-height: 1.5;
-        font-size: 20px;
+    .text {
+      font-size: 28px;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.7;
+      span {
+        &.deepblue {
+          color: rgb(74, 128, 228);
+        }
+        &.blue {
+          color: rgb(64, 163, 255);
+        }
+        &.skyblue {
+          color: rgb(173, 230, 253);
+        }
+        &.orange {
+          color: rgb(224, 148, 86);
+        }
       }
+    }
+  }
+}
+
+footer {
+  // border-top: 1px solid #444;
+  background-color: #222;
+  .inner {
+    padding: 0 24px;
+    max-width: 1200px;
+    box-sizing: content-box;
+    p {
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
     }
   }
 }
@@ -619,10 +689,10 @@ main {
           a {
             font-size: 18px;
             position: relative;
-            &:hover {
-              // color: #999;
-              // transition: all .2s;
-            }
+            // &:hover {
+            //   color: #999;
+            //   transition: all .2s;
+            // }
             &:hover::after {
               transform: scaleX(1);
             }
@@ -686,5 +756,18 @@ main {
         }
       }
     }
+    .section5 {
+      .inner {
+        .text {
+          font-size: 34px;
+        }
+        p {
+          font-size: 22px;
+        }
+      }
+    }
+
   }
+  
+
 }
