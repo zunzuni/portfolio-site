@@ -21,6 +21,115 @@
 
 <body>
 
+  <div class="loading-img">
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+    <div class="inner">
+      <?xml version="1.0" standalone="no"?>
+      <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+      <svg id="SVG-Circus-b97c24f3-d33b-68be-94e6-6aa3da532767" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+        <circle id="actor_4" cx="50" cy="75" r="5" opacity="1" fill="rgb(167, 0, 0)" fill-opacity="1" stroke=""
+          stroke-width="0" stroke-opacity="1" stroke-dasharray=""></circle>
+        <circle id="actor_3" cx="50" cy="75" r="5" opacity="1" fill="rgb(167, 0, 0)" fill-opacity="1" stroke=""
+          stroke-width="0" stroke-opacity="1" stroke-dasharray=""></circle>
+        <circle id="actor_2" cx="50" cy="75" r="5" opacity="1" fill="rgb(167, 0, 0)" fill-opacity="1" stroke=""
+          stroke-width="0" stroke-opacity="1" stroke-dasharray=""></circle>
+        <circle id="actor_1" cx="50" cy="75" r="5" opacity="1" fill="rgb(167, 0, 0)" fill-opacity="1" stroke=""
+          stroke-width="0" stroke-opacity="1" stroke-dasharray=""></circle>
+        <script type="text/ecmascript">
+          <![CDATA[
+          (function () {
+            var actors = {};
+            actors.actor_1 = {
+              node: document.getElementById("SVG-Circus-b97c24f3-d33b-68be-94e6-6aa3da532767").getElementById(
+                "actor_1"),
+              type: "circle",
+              cx: 50,
+              cy: 75,
+              dx: 10,
+              dy: 30,
+              opacity: 1
+            };
+            actors.actor_2 = {
+              node: document.getElementById("SVG-Circus-b97c24f3-d33b-68be-94e6-6aa3da532767").getElementById(
+                "actor_2"),
+              type: "circle",
+              cx: 50,
+              cy: 75,
+              dx: 10,
+              dy: 30,
+              opacity: 1
+            };
+            actors.actor_3 = {
+              node: document.getElementById("SVG-Circus-b97c24f3-d33b-68be-94e6-6aa3da532767").getElementById(
+                "actor_3"),
+              type: "circle",
+              cx: 50,
+              cy: 75,
+              dx: 10,
+              dy: 30,
+              opacity: 1
+            };
+            actors.actor_4 = {
+              node: document.getElementById("SVG-Circus-b97c24f3-d33b-68be-94e6-6aa3da532767").getElementById(
+                "actor_4"),
+              type: "circle",
+              cx: 50,
+              cy: 75,
+              dx: 10,
+              dy: 30,
+              opacity: 1
+            };
+            var tricks = {};
+            tricks.trick_1 = (function (_, t) {
+              t = (function (n) {
+                return .5 > n ? 2 * n * n : -1 + (4 - 2 * n) * n
+              })(t) % 1, t = t * 1 % 1, t = 0 > t ? 1 + t : t;
+              var a = (_.node, -25 * Math.cos(-90 * Math.PI / 180)),
+                i = 25 * Math.sin(-90 * Math.PI / 180);
+              a += 25 * Math.cos((-90 - 360 * t * 1) * Math.PI / 180), i -= 25 * Math.sin((-90 - 360 * t * 1) *
+                Math.PI / 180), _._tMatrix[4] += a, _._tMatrix[5] += i
+            });
+            var scenarios = {};
+            scenarios.scenario_1 = {
+              actors: ["actor_1", "actor_2", "actor_3", "actor_4"],
+              tricks: [{
+                trick: "trick_1",
+                start: 0,
+                end: 1
+              }],
+              startAfter: 0,
+              duration: 2000,
+              actorDelay: 500,
+              repeat: 0,
+              repeatDelay: 0
+            };
+            var _reqAnimFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window
+              .webkitRequestAnimationFrame || window.oRequestAnimationFrame,
+              fnTick = function (t) {
+                var r, a, i, e, n, o, s, c, m, f, d, k, w;
+                for (c in actors) actors[c]._tMatrix = [1, 0, 0, 1, 0, 0];
+                for (s in scenarios)
+                  for (o = scenarios[s], m = t - o.startAfter, r = 0, a = o.actors.length; a > r; r++) {
+                    if (i = actors[o.actors[r]], i && i.node && i._tMatrix)
+                      for (f = 0, m >= 0 && (d = o.duration + o.repeatDelay, o.repeat > 0 && m > d * o.repeat && (f =
+                          1), f += m % d / o.duration), e = 0, n = o.tricks.length; n > e; e++) k = o.tricks[e], w = (
+                        f - k.start) * (1 / (k.end - k.start)), tricks[k.trick] && tricks[k.trick](i, Math.max(0,
+                        Math.min(1, w)));
+                    m -= o.actorDelay
+                  }
+                for (c in actors) i = actors[c], i && i.node && i._tMatrix && i.node.setAttribute("transform",
+                  "matrix(" + i._tMatrix.join() + ")");
+                _reqAnimFrame(fnTick)
+              };
+            _reqAnimFrame(fnTick);
+          })()
+          ]]>
+        </script>
+      </svg>
+      <p>로딩중입니다 잠시만 기다려주세요</p>
+    </div>
+  </div>
   <header>
     <div class="logo-fix">
       <div class="logo">
@@ -184,7 +293,9 @@
                 " 퍼블리셔를 꿈꾸는 저를 소개합니다 "
               </p>
               <p>
-                배움을 두려워 하지 않고 새로운 지식을 사랑합니다 
+                제게 코딩이란 내 자신이 쓸모있다 생각을 갖게해주며 열심히 살아가게 하는 원동력이기도 합니다.<br />
+                코딩에 있어 배움을 두려워 하지 않고 새로운 지식을 사랑합니다.<br />
+                함께 일하며 함께 성장하는 사람이 되겠습니다.
               </p>
             </div>
           </div>
@@ -205,11 +316,12 @@
       </div>
         <div class="section3-content-box">
           <div class="section3-content">
-            <div>
+            <div class="section3-title">
               <div>01</div>
               <div>
                 <h3>FORD MUSTANG SITE : <span>6 PAGE</span></h3>
                 <p>
+                  <span>반응형</span>
                   <span class="red">html</span>
                   <span class="pink">(s)css</span>
                   <span class="yellow">javascript</span>
@@ -230,15 +342,20 @@
             <div>
               <div>02</div>
               <div>
-                <h3>HOMEDECO SITE : <span>6 PAGE</span></h3>
+                <h3>HOMEDECO SITE : <span>5 PAGE</span></h3>
                 <p>
+                  <span class="blue">반응형</span>
                   <span class="red">html</span>
                   <span class="pink">(s)css</span>
+                  <span class="yellow">javascript</span>
+                  <span class="blue">parcle</span>
+                  <span class="yellow">swiper js</span>
+                  <span class="pink">bootstrap</span>
                 </p>
               </div>
                 <div>
-                  <a href="https://github.com/zunzuni/FordMustang/tree/master/Desktop/dd/otherlinks/ford" target="_blank">github</a>
-                  <a href="javascript:void(0);">demo site</a>
+                  <a href="https://github.com/zunzuni/decosite.git" target="_blank">github</a>
+                  <a href="https://decosite.netlify.app" target="_blank">demo site</a>
                 </div>
             </div>
             <div>
@@ -250,8 +367,10 @@
             <div>
               <div>03</div>
               <div>
-                <h3>FORD MUSTANG SITE</h3>
+                <h3>BUSAN GALLERY SITE : <span>1 PAGE</span></h3>
                 <p>
+                  <span class="blue">반응형</span>
+                  <span class="deepred">제작중</span>
                   <span class="red">html</span>
                   <span class="pink">(s)css</span>
                   <span class="yellow">javascript</span>
@@ -259,8 +378,28 @@
                 </p>
               </div>
                 <div>
-                  <a href="https://github.com/zunzuni/decosite" target="_blank">github</a>
-                  <a href="javascript:void(0);">demo site</a>
+                  <a href="https://github.com/zunzuni/busangallery.git" target="_blank">github</a>
+                  <a href="https://busan-gallery.netlify.app/">demo site</a>
+                </div>
+            </div>
+            <div>
+                <img src="./image/header-icon.jpg" alt="zunzuni" />
+            </div>
+          </div>
+          <div class="section3-content">
+            <div>
+              <div>04</div>
+              <div>
+                <h3>TRAVEL AGENCY : <span>2 PAGE</span></h3>
+                <p>
+                  <span>반응형</span>
+                  <span class="red">html</span>
+                  <span class="pink">css</span>
+                </p>
+              </div>
+                <div>
+                  <a href="https://github.com/zunzuni/travelAgency" target="_blank">github</a>
+                  <a href="https://zunzuniiitravelagency.netlify.app/">demo site</a>
                 </div>
             </div>
             <div>
@@ -296,7 +435,7 @@
     </div>
     
   </main>
-  <div class="ii">
+  <!-- <div class="ii">
     <div class="iii">
       <div>
         <img src="./image/header-icon.jpg" alt="">
@@ -307,7 +446,7 @@
       <div>5</div>
     </div>
   </div>
-  
+   -->
   
 </body>
 </html>

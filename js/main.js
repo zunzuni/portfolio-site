@@ -46,7 +46,10 @@ window.addEventListener('load', () => {
 })
 
 //section1 text event
-
+const loadingImg = document.querySelector('.loading-img')
+window.addEventListener('load',() => {
+  loadingImg.classList.add('load')
+})
 
 
 
@@ -70,18 +73,16 @@ const iii = document.querySelector('.iii')
 // const iiiTop = ii.getBoundingClientRect()
 console.log(oneone)
 
-const iiiTop = window.pageYOffset + ii.getBoundingClientRect().top;
+// const iiiTop = window.pageYOffset + ii.getBoundingClientRect().top;
 
-window.addEventListener('scroll', () => {
-  console.log(window.scrollY)
-  console.log("ss:",iiiTop)
-  if (window.scrollY > iiiTop) {
-    iii.style.left = `-${window.scrollY - iiiTop}px`
-    iii.style.position = 'fixed'
-  } else {
-    iii.style.position = 'static'
-  }
-})
-console.log(oneone.height)
-    console.log(twotwo.height)
-    console.log(thrthr.height)
+// window.addEventListener('scroll', () => {
+//   // console.log(window.scrollY)
+//   // console.log("ss:",iiiTop)
+//   if (window.scrollY > iiiTop) {
+//     iii.style.left = `-${window.scrollY - iiiTop}px`
+//     iii.style.position = 'fixed'
+//   } else {
+//     iii.style.position = 'static'
+//   }
+// })
+
