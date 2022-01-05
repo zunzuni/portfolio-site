@@ -17,6 +17,8 @@ img {
 }
 .inner {
   margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: content-box;
 }
 a {
   text-decoration: none;
@@ -124,6 +126,7 @@ header {
   }
   .inner {
     width: 100%;
+    max-width: 100%;
     position: fixed;
     background-color: $main-color;    
     height: 0;
