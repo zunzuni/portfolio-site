@@ -52,4 +52,5 @@ window.addEventListener('load',() => {
 })
 
 
-
+document.querySelector('.year').textContent = new Date().getFullYear()
+//year
