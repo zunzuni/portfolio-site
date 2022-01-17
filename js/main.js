@@ -67,3 +67,10 @@ window.addEventListener('load',() => {
 
 document.querySelector('.year').textContent = new Date().getFullYear()
 //year
+// const pageBar = document.querySelector('.page-bar div')
+// const body = document.querySelector('body')
+// console.log(body.offsetHeight)
+
+// window.addEventListener('scroll',() => {
+//   pageBar.style.transform = `scaleX(${body.offsetHeight / window.scrollY * 100})`
+// })
