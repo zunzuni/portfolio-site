@@ -261,16 +261,16 @@ main {
       .section1-text {
         .section1-text-top {
           white-space: nowrap;
-          text-transform: uppercase;
+          // text-transform: uppercase;
           h1 {
             position: absolute;
             &.section1-text-top-1 {
               right: -100px;
-              top: 30%;
+              top: 35%;
             }
             &.section1-text-top-2 {
               left: -100px;
-              top: 30%;
+              top: 35%; 
               margin-top: 8.5vw;
             }
             span {
