@@ -78,7 +78,7 @@ a {
 
 header {
   .logo-fix {
-    max-width: 1980px;
+    max-width: 1600px;
     width: 94%;
     height: 70px;
     display: flex;
@@ -189,6 +189,7 @@ header {
         align-items: center;
         li {
           width: 33%;
+          margin-right: 8px;
           a {
             color: #fff;
             display: block;
@@ -203,6 +204,9 @@ header {
               text-align: center;
               font-size: 14px;
             }
+          }
+          &:last-child {
+            margin-right: 0;
           }
         }
       }
