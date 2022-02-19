@@ -17,7 +17,7 @@ hamBtn.addEventListener('click', () => {
 //mobile menu 
 
 const aboutTextTop =  document.querySelector('.section1-text .section1-text-top')
-const aboutTextH1 =  document.querySelectorAll('.section1-text .section1-text-top h1 span')
+const aboutTextH1 =  document.querySelectorAll('.section1-text .section1-text-top h2 span')
 const aboutTextH11 =  document.querySelectorAll('.section1-text .section1-text-top .section1-text-top-1')
 const aboutTextH12 =  document.querySelectorAll('.section1-text .section1-text-top .section1-text-top-2')
 const aboutTextP =  document.querySelector('.section1-text .section1-text-bottom')
